@@ -1,19 +1,13 @@
 import React from "react";
 import logo from "../../assets/byteBhojan.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="mt-5 mb-3 mx-3 py-4 px-10 bg-yellow-100 border-gray-200 dark:bg-gray-900 rounded-full">
       <div className="w-full flex flex-wrap items-center justify-between">
-        <a
-          href=""
-          className="flex items-center space-x-1 rtl:space-x-reverse"
-        >
-          <img
-            src={logo}
-            className="pt h-20"
-            alt="Flowbite Logo"
-          />
+        <a href="" className="flex items-center space-x-1 rtl:space-x-reverse">
+          <img src={logo} className="pt h-20" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             byteBhojan
           </span>
@@ -33,7 +27,13 @@ const Navbar = () => {
               src="/docs/images/people/profile-picture-3.jpg"
               alt="user photo"
             /> */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 rounded-full" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 rounded-full"
+              viewBox="0 0 320 512"
+            >
+              <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+            </svg>
           </button>
           {/* <!-- Dropdown menu --> */}
           <div
@@ -91,7 +91,7 @@ const Navbar = () => {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            
+
             {/* <svg
               className="w-5 h-5"
               aria-hidden="true"
@@ -99,7 +99,7 @@ const Navbar = () => {
               fill="none"
               viewBox="0 0 17 14"
             > */}
-              {/* <path
+            {/* <path
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -109,53 +109,50 @@ const Navbar = () => {
             {/* </svg> */}
           </button>
         </div>
+
+        {/* here is you navlinks */}
+        <div>
+          
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-user"
-        >
+          >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-yellow-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                aria-current="page"
+              <NavLink
+                to=""
+                className={({ isActive }) =>
+                `block py-2 px-3 rounded md:p-0 ${
+                  isActive ? "block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                }`
+              }
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                `block py-2 px-3 rounded md:p-0 ${
+                  isActive ? "block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                }`
+              }
               >
                 About
-              </a>
+              </NavLink>
             </li>
+
             <li>
               <a
                 href="#"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
+                >
                 Contact
               </a>
             </li>
           </ul>
+        </div>
         </div>
       </div>
     </nav>
