@@ -7,9 +7,9 @@ const Navbar = () => {
     <nav className="mt-5 mb-3 mx-3 py-4 px-10 bg-yellow-100 border-gray-200 dark:bg-gray-900 rounded-full">
       <div className="w-full flex flex-wrap items-center justify-between">
         <a href="" className="flex items-center space-x-1 rtl:space-x-reverse">
-          <img src={logo} className="pt h-20" alt="Flowbite Logo" />
+          <img src={logo} className="pt h-10 mt-0.5 md:h-20" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            byteBhojan
+          ᗷƳ丅ᗴᗷᕼᗝᒎᗩᑎ
           </span>
         </a>
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
